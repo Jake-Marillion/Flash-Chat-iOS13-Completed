@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        animateTitle()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -24,7 +25,10 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+    }
+    
+    func animateTitle() {
         titleLabel.text = ""
         var charIndex = 0.0
         let titleText = K.appName
@@ -34,8 +38,7 @@ class WelcomeViewController: UIViewController {
             }
             charIndex += 1
         }
-       
     }
-    
+
 
 }
